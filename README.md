@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Olot Tourism Website - Technical Report
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Page Structure (Wireframe Description)
+The application is designed as a Single Page Application that guides the user through the discovery of Olot.
 
-## Available Scripts
+*   **Header**:
+*   Is a fixed header positioned at the top of the page. It contains the website branding (“Olot Tourism”) and a navigation menu with links (Introduction, Discover, Activities) that allows the user to scroll to the corresponding sections.
+*   
+*   **Hero Section**: A full-screen introductory section featuring a high-quality background image of Olot's natural landscape. It includes a main central title, and a button ("Explore activities") that redirects the user to the activities and booking section.
+*   
+*   **Intro Section**: Aninformational section that introduces Olot. The content is a grid of three visual cards: Land of Volcanoes, Forests and City Integrated with Nature. These cards combine text with images to explain the main characteristics of the City. 
+*   **Multimedia Section**: A creative section that is dedicated to multimedia content. It includes:
+    *   An edited image.
+    *   An audio to listen to a local poem of "Joan Maragall".
+    *   A 3D volcano animation of a volcano.
+*   **Activities & Cart Section**: The functional part of the website. Is dividet in two columns: 
+    *   **Left Column (Activities)**: A grid that displays of tourist activities. Each activity card includes an image, title, price, and an "Add to cart" button.
+    *   **Right Column (Cart)**: A sidebar that displays the selected activities by the user that calculates the total price. Each activity added allows to be removed.
+*   **Footer**: A simple footer placed at the bottom of the website.
 
-In the project directory, you can run:
+## 2. Implemented Features and Multimedia Elements
 
-### `npm start`
+### Features
+*   **Component-Based Architecture**: The project is built using React. Each section (Hero, Intro, Activities, Cart...) is implemented as an independent component. Thanks to React's model, the aplication does not require page reloads, instead, the user interface updates whenever the aplication state changes. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Interactive Shopping Cart**: Users can add activities to their plan. The cart allows to:
+    *   Add new activities to the Cart.
+    *   Remove activities from the Cart.
+    *   Automatic recalculation of the total price.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Multimedia Elements
+*   **Audio Integration**: HTML5 `<audio>` tag used to include the poem "La Fageda d’en Jordà", allowing users to play and pause the audio on the website. 
+*   **Image Editing**: An original photograph of Olot was edited using color correction an saturating ajustments to enhance the intensity of the landscape. The sky was also modified changing a white color to a blue and cloudy sky. There is also a text overlay to indicate that the edited image is from Croscat Volcano.
+*   **3D Graphics (Three.js)**: A 3D volcano animation was developed using the three library:
+    *  The volcano is represented by a conical geometry.
+    *  A particle system simulates the lava eruption.
 
-### `npm test`
+## 3. Development Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First of all, the application was created using Create React App, which provided the initial structure and development environment. After that, I defined the main React components needed for the website.
 
-### `npm run build`
+Development started with the Header and Hero sections, as they establish the main layout and first visual impression. Next, the Introduction and Activities sections were implemented, including the activity selection and the Cart functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Finally, I focused on the Multimedia section, which required the most effort because it included searching for images, editing an photograph (color and saturation adjustments, text overlay), integrating an audio clip, and creating a 3D volcano animation using Three.js.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 4. Instructions to Run the Website Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project on your local machine, first, ensure you have **Node.js** installed on your computer. 
+Follow these steps:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Steps**
+1.  **Open Terminal**: Navigate to the project folder (`web-olot`).
+    ```bash
+    cd path/to/web-olot
+    ```
+2.  **Install Dependencies**: Run the following command to install necessary libraries as Three.js.
+    ```bash
+    npm install
+    ```
+3.  **Start the Server**: Run the application.
+    ```bash
+    npm start
+    ```
