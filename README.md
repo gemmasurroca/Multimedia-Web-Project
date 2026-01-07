@@ -5,9 +5,9 @@ The application is designed as a Single Page Application that guides the user th
 
 *   **Header**:
 *   Is a fixed header positioned at the top of the page. It contains the website branding (“Olot Tourism”) and a navigation menu with links (Introduction, Discover, Activities) that allows the user to scroll to the corresponding sections.
-*   
+  
 *   **Hero Section**: A full-screen introductory section featuring a high-quality background image of Olot's natural landscape. It includes a main central title, and a button ("Explore activities") that redirects the user to the activities and booking section.
-*   
+  
 *   **Intro Section**: Aninformational section that introduces Olot. The content is a grid of three visual cards: Land of Volcanoes, Forests and City Integrated with Nature. These cards combine text with images to explain the main characteristics of the City. 
 *   **Multimedia Section**: A creative section that is dedicated to multimedia content. It includes:
     *   An edited image.
